@@ -1,4 +1,6 @@
-export default {
-  base: '',
-};
+import { defineConfig } from 'vite'
+
+export default defineConfig({
+  base: '/sereneexotica/',
+})
 
