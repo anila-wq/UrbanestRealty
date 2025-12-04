@@ -50,7 +50,7 @@ const ongoingProjects = [
     area: '1744 - 1886 sq ft',
     status: 'Ongoing',
     amenities: ['Swimming Pool', 'Gym', 'Clubhouse', 'Security'],
-    url: 'https://eastfieldbyurbanest.com/'
+    url: 'https://urbanestrealty.in/eastfield/'
   },
   {
     id: 2,
