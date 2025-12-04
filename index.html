@@ -10,16 +10,19 @@
     <body>
 
 <div id="root"></div>
+<div id="root"></div>
 
 <script>
-  // 🛡️ GUARD: Only load the Main App if we are NOT on a microsite
   const path = window.location.pathname;
-  
-  // If the URL contains the microsite names, DO NOT load the main app
-  if (!path.includes('/sereneexotica') && !path.includes('/eastfield')) {
+  // Check for both microsite paths
+  const isMicrosite = path.startsWith('/sereneexotica') || path.startsWith('/eastfield');
+
+  if (!isMicrosite) {
+    // Only load the main application's script if we are NOT on a microsite path
     const script = document.createElement('script');
     script.type = 'module';
-    script.src = '/src/main.jsx'; // Make sure this matches your original path!
+    // ⚠️ ENSURE THIS PATH IS CORRECT for your main app's entry script
+    script.src = '/src/main.jsx'; 
     document.body.appendChild(script);
   }
 </script>
