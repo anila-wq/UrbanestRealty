@@ -12,23 +12,18 @@
 <div id="root"></div>
 
 <script>
-  // Get the current path (e.g., /sereneexotica/ or /eastfield/)
   const path = window.location.pathname;
-
-  // Check if the path STARTS with the microsite folder names
+  // Check for both microsite paths
   const isMicrosite = path.startsWith('/sereneexotica') || path.startsWith('/eastfield');
 
-  // If it's NOT a microsite path, load the main application's script
   if (!isMicrosite) {
-    // This is the main application's entry script
+    // Only load the main application's script if we are NOT on a microsite path
     const script = document.createElement('script');
     script.type = 'module';
-    // ⚠️ ENSURE this path is correct for your main app's entry script (e.g., /src/main.jsx)
+    // ⚠️ ENSURE THIS PATH IS CORRECT for your main app's entry script
     script.src = '/src/main.jsx'; 
     document.body.appendChild(script);
   }
-  // If isMicrosite is true, no script runs, allowing the index.html inside
-  // /sereneexotica/ or /eastfield/ to take control when served by the server.
 </script>
 
     </body>
