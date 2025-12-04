@@ -1,0 +1,29 @@
+
+  <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Urbanest Realty | Luxury Apartments & Plots in East Bangalore</title>
+    </head>
+
+    <body>
+
+<div id="root"></div>
+
+<script>
+  // 🛡️ GUARD: Only load the Main App if we are NOT on a microsite
+  const path = window.location.pathname;
+  
+  // If the URL contains the microsite names, DO NOT load the main app
+  if (!path.includes('/sereneexotica') && !path.includes('/eastfield')) {
+    const script = document.createElement('script');
+    script.type = 'module';
+    script.src = '/src/main.jsx'; // Make sure this matches your original path!
+    document.body.appendChild(script);
+  }
+</script>
+
+    </body>
+  </html>
+  
