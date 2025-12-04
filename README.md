@@ -1,5 +1,4 @@
 
-
   # Urbanest Realty | Luxury Apartments & Plots in East Bangalore
 
   This is a code bundle for Urbanest Realty | Luxury Apartments & Plots in East Bangalore. The original project is available at https://www.figma.com/design/2l81kG0zvuIEvos8o4qW1m/Urbanest-Realty-%7C-Luxury-Apartments---Plots-in-East-Bangalore.
@@ -10,6 +9,3 @@
 
   Run `npm run dev` to start the development server.
   
-  ## Deployment Check 5.0
-   
-## FINAL DEPLOYMENT ATTEMPT X
