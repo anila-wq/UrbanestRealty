@@ -118,7 +118,7 @@ export const Navigation = memo(function Navigation() {
                 {projectItems.map((project) => (
                   <a
                     key={project.name}
-                    href={project.name === 'Eastfield' ? '/eastfield/' : project.name === 'Serene Exotica' ? 'https://sereneexotica.in' : project.name === 'Elite-35' ? '#projects' : project.href}
+                    href={project.name === 'Eastfield' ? '/eastfield/' : project.name === 'Serene Exotica' ? '/sereneexotica/' : project.name === 'Elite-35' ? '#projects' : project.href}
                     target={(project.external || project.name === 'Serene Exotica' || project.name === 'Eastfield') && project.name !== 'Elite-35' ? "_blank" : "_self"}
                     rel={(project.external || project.name === 'Serene Exotica' || project.name === 'Eastfield') && project.name !== 'Elite-35' ? "noopener noreferrer" : undefined}
                     className="text-gray-600 hover:text-gray-900 hover:bg-gray-50 block px-3 py-2 rounded-md text-sm transition-colors duration-150"

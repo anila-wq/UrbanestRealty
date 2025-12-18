@@ -131,7 +131,7 @@ export function Footer() {
                   {footerLinks.projects.map((link) => (
                     <li key={link.name}>
                       <a 
-                        href={link.name === 'Eastfield' ? '/eastfield/' : link.name === 'Elite-35' ? 'https://date-relume-15377570.figma.site' : link.name === 'Serene Exotica' ? 'https://sereneexotica.in' : link.href}
+                        href={link.name === 'Eastfield' ? '/eastfield/' : link.name === 'Elite-35' ? 'https://date-relume-15377570.figma.site' : link.name === 'Serene Exotica' ? '/sereneexotica/' : link.href}
                         className="text-gray-400 hover:text-gray-100 transition-colors"
                         target="_blank"
                         rel="noopener noreferrer"
