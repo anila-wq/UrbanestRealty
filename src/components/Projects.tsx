@@ -51,7 +51,6 @@ const ongoingProjects = [
     status: 'Ongoing',
     amenities: ['Swimming Pool', 'Gym', 'Clubhouse', 'Security'],
     url: '/eastfield/',
-
   },
   {
     id: 2,

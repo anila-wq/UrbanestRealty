@@ -61,7 +61,7 @@ export const Navigation = memo(function Navigation() {
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <a
-                href="#"
+                href="#
                 onClick={handleLogoClick}
                 className="block hover:opacity-80 transition-opacity duration-150 cursor-pointer"
                 aria-label="Go to home page"
