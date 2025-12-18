@@ -65,7 +65,7 @@ const ongoingProjects = [
     area: '1500 - 5500 sq ft',
     status: 'Ongoing',
     amenities: ['Landscaped Gardens', 'Kids Play Area', 'Jogging Track', 'Library'],
-    url: 'https://sereneexotica.in'
+    url: "/sereneexotica/",
   }
 ];
 
