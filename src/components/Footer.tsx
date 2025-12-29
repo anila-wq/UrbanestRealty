@@ -62,9 +62,9 @@ const footerLinks = {
     { name: 'Contact Us', href: '#contact' }
   ],
   projects: [
-    { name: 'Eastfield', href: 'https://squad-fish-91293738.figma.site/' },
+    { name: 'Eastfield', href: '/eastfield' },
     { name: 'Elite-35', href: '#elite-35' },
-    { name: 'Serene Exotica', href: 'https://squad-fish-91293738.figma.site' }
+    { name: 'Serene Exotica', href: '/sereneexotica' }
   ],
   services: [
     { name: 'Property Sales', href: '#sales' },
@@ -114,7 +114,9 @@ export function Footer() {
                 <ul className="space-y-2">
                   {footerLinks.quickLinks.map((link) => (
                     <li key={link.name}>
-                      <a 
+                        href={link.href}
+  className="text-gray-400 hover:text-white transition-colors"
+><a 
                         href={link.href} 
                         className="text-gray-400 hover:text-gray-100 transition-colors"
                       >
@@ -130,7 +132,14 @@ export function Footer() {
                 <ul className="space-y-2">
                   {footerLinks.projects.map((link) => (
                     <li key={link.name}>
-                      <a 
+                     /eastfield/ <a
+                        href={link.name === 'Eastfield' ? '/eastfield/' : link.name === 'Elite-35' ? 'https://date-relume-15377570.figma.site' : link.name === 'Serene Exotica' ? '/sereneexotica/' : link.href}
+                        className="text-gray-400 hover:text-gray-100 transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {link.name}
+                      </a> <a 
                         href={link.name === 'Eastfield' ? '/eastfield/' : link.name === 'Elite-35' ? 'https://date-relume-15377570.figma.site' : link.name === 'Serene Exotica' ? '/sereneexotica/' : link.href}
                         className="text-gray-400 hover:text-gray-100 transition-colors"
                         target="_blank"
