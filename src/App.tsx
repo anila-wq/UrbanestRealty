@@ -83,7 +83,7 @@ export default function App() {
     // Prefetch external project links for faster navigation
     const prefetchLinks = [
       '/eastfield/',
-      'https://sereneexotica.in',
+      '/sereneexotica/',
       'https://date-relume-15377570.figma.site'
     ];
 

@@ -111,28 +111,65 @@ export function Footer() {
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <h3 className="font-bold text-xl mb-4 text-gray-100">Quick Links</h3>
-                <ul className="space-y-2">
-                  {footerLinks.quickLinks.map((link) => (
-                    <li key={link.name}>
-                        href={link.href}
-  className="text-gray-400 hover:text-white transition-colors"
-><a 
-                        href={link.href} 
-                        className="text-gray-400 hover:text-gray-100 transition-colors"
-                      >
-                        {link.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
+                  {footerLinks.projects.map((link) => (
+    <li key={link.name}>
+      <a
+        href={link.name === 'Eastfield' ? '/eastfield/' : link.name === 'Elite-35' ? 'https://date-relume-15377570.figma.site' : link.name === 'Serene Exotica' ? '/sereneexotica/' : link.href}
+        className="text-gray-400 hover:text-gray-100 transition-colors"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {link.name}
+      </a>
+      <a 
+        href={link.name === 'Eastfield' ? '/eastfield/' : link.name === 'Elite-35' ? 'https://date-relume-15377570.figma.site' : link.name === 'Serene Exotica' ? '/sereneexotica/' : link.href}
+        className="text-gray-400 hover:text-gray-100 transition-colors"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {link.name}
+      </a>
+    </li>
+  ))}
+</ul>
+  {footerLinks.projects.map((link) => (
+    <li key={link.name}>
+      <a
+
+------------start anila------------
+<ul className="space-y-2">
+  {footerLinks.projects.map((link) => (
+    <li key={link.name}>
+      <a
+        href={link.href}
+        className="text-gray-400 hover:text-gray-100 transition-colors"
+        target={link.href.startsWith('http') ? '_blank' : '_self'}
+        rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+      >
+        {link.name}
+      </a>
+    </li>
+  ))}
+</ul>
+---------End code anila------
+
               </div>
               
               <div>
                 <h3 className="font-bold text-xl mb-4 text-gray-100">Our Projects</h3>
                 <ul className="space-y-2">
                   {footerLinks.projects.map((link) => (
-                    <li key={link.name}>
-                     /eastfield/ <a
+                        href={link.href}
+className="text-gray-400 hover:text-white transition-colors"
+><a 
+    href={link.href} 
+    className="text-gray-400 hover:text-gray-100 transition-colors"
+>
+    {link.name}
+</a>
+</li>
+<li key={link.name}>
+                      <a
                         href={link.name === 'Eastfield' ? '/eastfield/' : link.name === 'Elite-35' ? 'https://date-relume-15377570.figma.site' : link.name === 'Serene Exotica' ? '/sereneexotica/' : link.href}
                         className="text-gray-400 hover:text-gray-100 transition-colors"
                         target="_blank"
