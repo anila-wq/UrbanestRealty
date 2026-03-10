@@ -105,82 +105,35 @@ export function Footer() {
               Our primary goal is to ensure complete customer satisfaction and foster lasting relationships.
             </p>
           </div>
-
-          {/* Quick Links & Projects */}
+                   {/* Quick Links & Projects */}
           <div className="bg-gray-800/50 px-6 pt-6 pb-4 -mb-4 rounded-lg border border-gray-700 hover:border-gray-600 transition-colors">
             <div className="grid grid-cols-2 gap-6">
               <div>
                 <h3 className="font-bold text-xl mb-4 text-gray-100">Quick Links</h3>
-                  {footerLinks.projects.map((link) => (
-    <li key={link.name}>
-      <a
-        href={link.name === 'Eastfield' ? '/eastfield/' : link.name === 'Elite-35' ? 'https://date-relume-15377570.figma.site' : link.name === 'Serene Exotica' ? '/sereneexotica/' : link.href}
-        className="text-gray-400 hover:text-gray-100 transition-colors"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {link.name}
-      </a>
-      <a 
-        href={link.name === 'Eastfield' ? '/eastfield/' : link.name === 'Elite-35' ? 'https://date-relume-15377570.figma.site' : link.name === 'Serene Exotica' ? '/sereneexotica/' : link.href}
-        className="text-gray-400 hover:text-gray-100 transition-colors"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {link.name}
-      </a>
-    </li>
-  ))}
-</ul>
-  {footerLinks.projects.map((link) => (
-    <li key={link.name}>
-      <a
-
-------------start anila------------
-<ul className="space-y-2">
-  {footerLinks.projects.map((link) => (
-    <li key={link.name}>
-      <a
-        href={link.href}
-        className="text-gray-400 hover:text-gray-100 transition-colors"
-        target={link.href.startsWith('http') ? '_blank' : '_self'}
-        rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-      >
-        {link.name}
-      </a>
-    </li>
-  ))}
-</ul>
----------End code anila------
-
+                <ul className="space-y-2">
+                  {footerLinks.quickLinks.map((link) => (
+                    <li key={link.name}>
+                      <a
+                        href={link.href}
+                        className="text-gray-400 hover:text-gray-100 transition-colors"
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              
+
               <div>
                 <h3 className="font-bold text-xl mb-4 text-gray-100">Our Projects</h3>
                 <ul className="space-y-2">
                   {footerLinks.projects.map((link) => (
-                        href={link.href}
-className="text-gray-400 hover:text-white transition-colors"
-><a 
-    href={link.href} 
-    className="text-gray-400 hover:text-gray-100 transition-colors"
->
-    {link.name}
-</a>
-</li>
-<li key={link.name}>
+                    <li key={link.name}>
                       <a
-                        href={link.name === 'Eastfield' ? '/eastfield/' : link.name === 'Elite-35' ? 'https://date-relume-15377570.figma.site' : link.name === 'Serene Exotica' ? '/sereneexotica/' : link.href}
+                        href={link.href}
                         className="text-gray-400 hover:text-gray-100 transition-colors"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {link.name}
-                      </a> <a 
-                        href={link.name === 'Eastfield' ? '/eastfield/' : link.name === 'Elite-35' ? 'https://date-relume-15377570.figma.site' : link.name === 'Serene Exotica' ? '/sereneexotica/' : link.href}
-                        className="text-gray-400 hover:text-gray-100 transition-colors"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        target={link.href.startsWith('http') ? '_blank' : '_self'}
+                        rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
                       >
                         {link.name}
                       </a>
@@ -190,7 +143,7 @@ className="text-gray-400 hover:text-white transition-colors"
               </div>
             </div>
           </div>
-
+        
           {/* Contact Information - Moved to Right */}
           <div>
             <h3 className="font-bold text-xl mb-6 text-gray-100">Contact Us</h3>

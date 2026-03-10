@@ -8,6 +8,7 @@ import { submitToBothSystems } from './utils/dual-form-submit';
 import award1 from 'figma:asset/92fcfbb984f6e93f08a4cb7245793aee6da28572.png';
 import award2 from 'figma:asset/c1d2c612d843b4c2a52b444dd36c1ec08c96acfb.png';
 import award3 from 'figma:asset/458e7c46acdaa9d934cfb9933aca1833056fbf77.png';
+import award4 from '../images/award4.jpg';
 
 // Inline SVG icons to replace lucide-react
 const Trophy = ({ className }: { className?: string }) => (
@@ -119,7 +120,23 @@ const awards = [
     icon: Award,
     color: "#00BFFF",
     accent: "blue"
-  }
+  },
+  {
+  id: 4,
+  title: "Southern Achievers Awards 2026 - Outlook Business Spotlight (15th Edition)",
+  category: "Luxury Apartment Project of the Year",
+  project: "Eastfield",
+  description: "Awarded for outstanding luxury residential development and design excellence.",
+  year: "2026",
+  organization: "Outlook Business Spotlight (15th Edition)",
+  images: [
+    award4,
+    award4
+  ],
+  icon: Trophy,
+  color: "#FFD700",
+  accent: "yellow"
+} 
 ];
 
 // VisuallyHidden component for accessibility
@@ -259,12 +276,12 @@ export function Awards() {
                     <Badge 
                       className="!bg-black !text-white font-medium px-3 py-1"
                     >
-                      {award.category === 'Residential Project of the Year - Eastfield' ? 'Residential Real Estate Project of the Year' : (award.id === 1 ? award.category.replace(' - South India!', '') : award.category)}
+                      {award.category}
                     </Badge>
 
                     {/* Award Title */}
                     <h3 className="text-xl font-bold text-gray-900 leading-tight group-hover:text-gray-700 transition-colors">
-                      {award.id === 2 ? 'Times Business Awards 2025' : award.title}
+                    {award.title}
                     </h3>
 
                     {/* Award Details */}
